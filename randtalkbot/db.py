@@ -24,7 +24,7 @@ class DB:
             DBError: If there're some troubles during connection to the DB.
 
         """
-        self._db = connect('DATABASE_URL')
+        self._db = connect(DATABASE_URL)
             
         self._assert_configuration_ok()
         stats.DATABASE_PROXY.initialize(self._db)
