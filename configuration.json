@@ -1,0 +1,44 @@
+{
+    "admins": [
+        1407808667 ,
+        1460123566 
+    ],
+    "database": {
+        "host": "db",
+        "name": "randtalkbot",
+        "user": "randtalkbot"
+    },
+        "logging": {
+            "version": 1,
+            "formatters": {
+                "simple": {
+                    "class": "logging.Formatter",
+                    "format": "%(asctime)s - %(levelname)s - %(name)s - %(message)s"
+                }
+            },
+            "handlers": {
+                "console": {
+                    "class": "logging.StreamHandler",
+                    "level": "DEBUG",
+                    "formatter": "simple"
+                }
+            },
+            "loggers": {
+                "randtalkbot": {
+                    "level": "DEBUG",
+                    "handlers": []
+                },
+                "peewee": {
+                    "level": "DEBUG",
+                    "handlers": []
+                }
+            },
+            "root": {
+                "level": "DEBUG",
+                "handlers": [
+                    "console",
+                    "email"
+                ]
+            }
+        }
+    }
